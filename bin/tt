@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'timetraveller'
+require 'slop'
+
+opts = Slop.parse do |o|
+  o.string '-p', '--path', 'path to run the command', default: Dir.pwd
+  o.string '-s', '--sha', 'a sha sum'
+  o.integer '-j', '--jump', 'a number to step by', default: 1
+  o.integer '-b', '--begin', 'the commit number to begin from', default: 0
+  o.integer '-e', '--end', 'the commit number to end at'
+  o.string '-c', '--command', 'the command to run'
+  o.on '--help' do
+    puts o
+    exit
+  end
+end
+
+Timetraveller::CommitWalker
+    .new(File.expand_path(opts.to_hash[:path]))
+    .do_command(opts.to_hash[:command])
