@@ -1,3 +1,30 @@
+```
+repos/timetraveller git:(master) ▶ be bin/tt -p /Users/ashley.towns/devel/repos/atlas/ -c "du -h | tail -n 1"
+765M	.
+765M	.
+765M	.
+765M	.
+765M	.
+766M	.
+766M	.
+766M	.
+766M	.
+766M	.
+766M	.
+766M	.
+766M	.
+766M	.
+776M	.
+776M	.
+776M	.
+776M	.
+776M	.
+776M	.
+776M	.
+776M	.
+776M	.
+```
+
 # Timetraveller
 
 TODO: Write a gem description
